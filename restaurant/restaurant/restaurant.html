@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Comfort Cafe</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #fefefe, #f0f0e0);
+            color: #333;
+        }
+
+        .header-nav {
+            background-color: #3e2723;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .header-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        .header-nav a:hover {
+            background-color: #5d4037;
+        }
+
+        .menu-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 900;
+            background: linear-gradient(90deg, #b87333, #e6b800, #b87333);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #5d4037;
+            border-bottom: 3px solid #b87333;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .starters-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .starter-item {
+            flex: 1 1 350px;
+            background-color: #f7f3e8;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .item-text {
+            flex-grow: 1;
+        }
+
+        .item-text strong {
+            color: #3e2723;
+            font-size: 1.1em;
+        }
+
+        .starter-img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-left: 15px;
+            border: 3px solid #e6b800;
+        }
+
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .menu-table th, .menu-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .menu-table th {
+            background: linear-gradient(90deg, #5d4037, #795548);
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .price-col {
+            text-align: right;
+            font-weight: bold;
+            color: #e74c3c;
+            width: 80px;
+        }
+
+        .menu-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .dessert-list {
+            list-style-type: decimal;
+            list-style-position: inside;
+            padding-left: 0;
+        }
+
+        .dessert-list li {
+            padding: 10px 0;
+            border-bottom: 1px dotted #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dessert-list span {
+            font-weight: bold;
+            color: #b87333;
+        }
+
+        dl {
+            padding: 10px 20px;
+            background-color: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        dt {
+            font-weight: bold;
+            color: #4CAF50;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        dd {
+            margin-left: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px dotted #f0f0f0;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .menu-container {
+                margin: 20px;
+                padding: 10px;
+            }
+            .menu-table th, .menu-table td {
+                padding: 10px 5px;
+            }
+            .header-nav a {
+                display: block;
+                margin: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-nav">
+        <a href="restaurant.html">Menu</a>
+        <a href="buy.html">Buy</a>
+        <a href="login.html">Login</a>
+        <a href="contact.html">Contact</a>
+        <a href="complain.html">Complain</a>
+    </div>
+
+    <div class="menu-container">
+        <h1>The Lazy Menu(Classic menu)</h1>
+
+        <h2>Appetizers(Breakfast)</h2>
+        <ul class="starters-list">
+            <li class="starter-item">
+                <div class="item-text">
+                    <strong>Samosa(20Rupees)</strong>
+                    <p>Desi garam garam ghee Samosa.</p>
+                </div>
+                <img src="images\samosa.jpg" alt="Samosa" class="starter-img">
+            </li>
+            <li class="starter-item">
+                <div class="item-text">
+                    <strong>Onion Poha(20Rupees)</strong>
+                    <p>Apne tasty Onion poha Indain taste ke sath.</p>
+                </div>
+                <img src="images\poha.jpg" alt="Poha" class="starter-img">
+            </li>
+        </ul>
+
+        <h2>Main Courses</h2>
+        <table class="menu-table">
+            <thead>
+                <tr>
+                    <th>Dish</th>
+                    <th>Description</th>
+                    <th class="price-col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Punjabi thali</td>
+                    <td>Served with buttermilk(chach).</td>
+                    <td class="price-col">150Rupees</td>
+                </tr>
+                <tr>
+                    <td>South thali</td>
+                    <td>Served with coconut chutney.</td>
+                    <td class="price-col">80Rupees</td>
+                </tr>
+                <tr>
+                    <td>Chinese</td>
+                    <td>Chinese has multiple options.</td>
+                    <td class="price-col">110Rupees</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Sweet Treats</h2>
+        <ol class="dessert-list">
+            <li>Chocolate Lava Cake <span>50Rupees</span></li>
+            <li>Cheesecake <span>60Rupees</span></li>
+            <li> Ice Cream <span>30Rupees</span></li>
+        </ol>
+
+        <h2>Beverages</h2>
+        <dl>
+            <dt>Espresso</dt>
+            <dd>A strong, concentrated coffee, perfect after dinner.</dd>
+
+            <dt>Fresh Lemonade</dt>
+            <dd>Homemade lemonade, served chilled with mint.</dd>
+
+            <dt>Sparkling Water</dt>
+            <dd>Premium carbonated water with a slice of lime.</dd>
+        </dl>
+
+    </div>
+
+</body>
+</html>
